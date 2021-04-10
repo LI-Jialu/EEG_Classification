@@ -1,4 +1,5 @@
 %% BMEG3330 FINAL PROJECT GROUP 1
+%% 2021 April
 
 %% Organizing training data
 train_folder = 'training_data\';
