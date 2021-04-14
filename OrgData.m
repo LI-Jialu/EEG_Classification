@@ -1,7 +1,7 @@
 function [EEG,LABELS] = OrgData(fileFolder,trial_num,t_pre,t_post)
     SampleRate = 256;
     channel_num = 16;
-    
+     
     dirOutput=dir(fullfile(fileFolder,'*.mat'));
     fileNames={dirOutput.name}';
     num_of_sets = length(fileNames);
@@ -29,7 +29,7 @@ function [EEG,LABELS] = OrgData(fileFolder,trial_num,t_pre,t_post)
         if exist('Stimulus_Type','var')
             Temp_Label = Stimulus_Type(1:trial_num);
         else
-            Temp_Label = [zeros(trial_num,1) -1];
+            Temp_Label = zeros(trial_num,1) - 1;
         end
         LABELS = [LABELS; Temp_Label];
         EEG = [EEG; Temp_EEG];
